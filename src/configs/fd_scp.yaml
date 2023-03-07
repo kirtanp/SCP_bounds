@@ -1,0 +1,46 @@
+---
+#dataset
+generate_data: True
+# Only used if generate_data is True
+dataset: synth-2d
+equations: fd-lin2-2d
+xstar_axis: 0
+num_data: 10000
+
+# Where to get the data if generate_data is False
+data_path: "../data/filename.pkl"
+# Approximations
+response_type: mlp # mlp or polynomial
+model_mx: flow
+num_xstar: 3
+dim_theta: 5
+num_to_remove: 0
+constr_type: multi # single or multi
+# Optimization
+num_rounds: 150
+opt_steps: 30
+num_samples_obj: 500
+num_constant_samples: 100
+global_conv_check: False
+num_runs_each_bound: 5
+
+# Constraint
+slack: 0.3
+slack_abs: 0.3
+# Learning rate and momentum
+lr: 0.001
+
+# Optimization schedules
+tau_init: 10
+tau_factor: 5
+tau_max: 10000
+eta_min: 0.05
+# Input / Output
+data_dir: "../data/"
+output_dir: "../results/"
+save_rhs_every_step: False
+store_data: False
+# Randomness
+seed_data: 2
+seed_method: 20
+
