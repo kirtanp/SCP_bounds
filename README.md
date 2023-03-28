@@ -20,3 +20,5 @@ Code for synthetic data generation is in `src/utils/data.py`.
 To run the code, you simply need to set the parameters in the respective config files and then simply call `python IV_SCP.py` or `python FD_SCP.py`. It is possible to provide your own dataset in the form of a dictionary, with keys `x`, `y` `z` and `xstar_grid` for the IV setting and keys `x`, `y` `m` and `xstar_grid` for the FD setting. Here `xstar_grid` is the list of $x*$ values for which you want the bounds on $\mathbb{E}[y|do(x^*)]$.
 
 Code hsa been changed significantly in structure (but not function or logic) from the paper so if something doesn't work feel free to reach out or raise an issue. Code for the general implementation will be added soon as well.
+
+Note: The methods whitens the data, so the final results that come out have whitened values of interventions and effects. This will be changed soon.
